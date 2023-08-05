@@ -3,7 +3,7 @@ import { Column, DataType, Table, Model, BelongsToMany, ForeignKey } from "seque
 import { User } from "src/users/users.model";
 import { Role } from "./roles.model";
 
-@Table({tableName: 'user-roles', updatedAt: false, createdAt: false})
+@Table({tableName: 'user-roles'})
 export class UserRoles extends Model<UserRoles>{
     @ApiProperty({example: '1', description: 'Unique id'})
     @Column({type: DataType.INTEGER, unique: true, primaryKey: true, autoIncrement: true})
